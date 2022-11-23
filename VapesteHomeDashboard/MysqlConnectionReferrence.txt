@@ -1,0 +1,10 @@
+﻿string server = "sql.freedb.tech", database = "freedb_MVC_Proj", username ="freedb_Vapers", pass = "ncxW8Ct2nF?9QzG";
+string constring = "SERVER=" + server + ";DATABASE=" + database + ";UID=" + username + ";PASSWORD=" + pass + ";";
+MySqlConnection conn = new MySqlConnection(constring);
+
+conn.Open();
+conn.Close();
+
+MySqlCommand, pag lalagyan ng query, arguments ay query at connection
+MySqlDataReader reader = querystring.ExecuteReader(); nagrereturn ng?
+
