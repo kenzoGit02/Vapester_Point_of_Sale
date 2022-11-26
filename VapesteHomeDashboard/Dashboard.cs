@@ -44,11 +44,11 @@ namespace VapesteHomeDashboard
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int a = Convert.ToInt32(textBox1.Text);
-            int b = Convert.ToInt32(textBox2.Text);
+            int a = Convert.ToInt32(txtProduct.Text);
+            int b = Convert.ToInt32(txtQuantity.Text);
            
 
-            textBox3.Text = Convert.ToString(a + b);
+            txtPrice.Text = Convert.ToString(a + b);
 
 
         }
@@ -65,11 +65,11 @@ namespace VapesteHomeDashboard
 
         private void button7_Click(object sender, EventArgs e)
         {
-            int a = Convert.ToInt32(textBox1.Text);
-            int b = Convert.ToInt32(textBox2.Text);
+            int a = Convert.ToInt32(txtProduct.Text);
+            int b = Convert.ToInt32(txtQuantity.Text);
 
             int d = Convert.ToInt32(textBox4.Text);
-            int j = Convert.ToInt32(textBox3.Text);
+            int j = Convert.ToInt32(txtPrice.Text);
             textBox5.Text = Convert.ToString( d - j );
         }
 
@@ -219,6 +219,35 @@ namespace VapesteHomeDashboard
         {
             About form = new About();
             form.Show();
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtProduct.Text) || string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtQuantity.Text) || string.IsNullOrEmpty(txtPrice.Text))
+                return;
+            ListViewItem item = new ListViewItem(txtProduct.Text);
+            item.SubItems.Add(txtName.Text);
+            item.SubItems.Add(txtQuantity.Text);
+            item.SubItems.Add(txtPrice.Text);
+            listView1.Items.Add(item);
+
+            txtProduct.Clear();
+            txtName.Clear();
+            txtQuantity.Clear();
+            txtPrice.Clear();
+            txtProduct.Focus();
+
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (listView1.Items.Count > 0)
+                listView1.Items.Remove(listView1.SelectedItems[0]);
         }
     }
 }
