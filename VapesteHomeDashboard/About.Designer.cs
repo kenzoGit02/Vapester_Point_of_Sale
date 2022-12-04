@@ -63,6 +63,7 @@
             this.sidebar.Name = "sidebar";
             this.sidebar.Size = new System.Drawing.Size(196, 700);
             this.sidebar.TabIndex = 7;
+            this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.sidebar_Paint);
             // 
             // button3
             // 
@@ -79,6 +80,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Logout";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
@@ -95,6 +97,7 @@
             this.button5.TabIndex = 3;
             this.button5.Text = "About";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button2
             // 
@@ -126,6 +129,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1370, 38);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button6
             // 
@@ -141,6 +145,7 @@
             this.button6.Size = new System.Drawing.Size(35, 34);
             this.button6.TabIndex = 2;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
@@ -152,6 +157,7 @@
             this.label1.Size = new System.Drawing.Size(115, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "VAPESTER";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel5
             // 
@@ -167,26 +173,29 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1174, 711);
             this.panel5.TabIndex = 8;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(571, 60);
+            this.panel3.Location = new System.Drawing.Point(478, 18);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(515, 447);
+            this.panel3.Size = new System.Drawing.Size(682, 679);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(60, 171);
+            this.label3.Location = new System.Drawing.Point(33, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(338, 17);
             this.label3.TabIndex = 1;
             this.label3.Text = "Our store, Vapester is the blah blah blah blah blah...";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -194,29 +203,32 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label2.Location = new System.Drawing.Point(57, 106);
+            this.label2.Location = new System.Drawing.Point(30, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 36);
             this.label2.TabIndex = 0;
             this.label2.Text = "About Us";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(148, 60);
+            this.pictureBox1.Location = new System.Drawing.Point(90, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(360, 447);
+            this.pictureBox1.Size = new System.Drawing.Size(199, 296);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
-            this.panel2.Location = new System.Drawing.Point(79, 253);
+            this.panel2.Location = new System.Drawing.Point(21, 197);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(495, 254);
+            this.panel2.Size = new System.Drawing.Size(334, 103);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // About
             // 
