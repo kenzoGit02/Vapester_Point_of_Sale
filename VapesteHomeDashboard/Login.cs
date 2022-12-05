@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,36 +18,43 @@ namespace VapesteHomeDashboard
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn1_Click(object sender, EventArgs e)
         {
-           
-            if (txtBox1.Text == "" && txtBox2.Text == "")
-            {
-                MessageBox.Show("Enter your Username and Password");
-                txtBox1.Focus();
-            }
-            else if (txtBox1.Text != "" && txtBox2.Text == "")
-            {
-                MessageBox.Show("Enter your Password");
-                txtBox2.Focus();
-            }
-            else if (txtBox1.Text == "" && txtBox2.Text != "")
-            {
-                MessageBox.Show("Enter your Username");
-            }
-            else if(txtBox1.Text == "hello" && txtBox2.Text == "hello")
-            {
-                Dashboard f1 = new Dashboard();
-                f1.Show();
-                this.Hide();
-                 
-            }
 
+            string server = "sql.freedb.tech", database = "freedb_MVC_Proj", username = "freedb_Vapers", password = "ncxW8Ct2nF?9QzG";
+            string constring = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
+
+            MySqlConnection conn = new MySqlConnection(constring);
+            string query = "Select * From tbl_teller Where email='" + txtBox1.Text + "'And password='" + txtBox2.Text + "'";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataReader reader;
+
+            try
+            {
+
+                conn.Open();
+                reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        MessageBox.Show("Succes");
+                        this.Hide();
+                        Dashboard db = new Dashboard();
+                        db.ShowDialog();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Either your Username or Password are Incorrect, Please type it again.");
+                }
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
