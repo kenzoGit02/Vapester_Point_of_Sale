@@ -39,7 +39,6 @@ namespace VapesteHomeDashboard
                 {
                     while (reader.Read())
                     {
-                        MessageBox.Show("Succes");
                         this.Hide();
                         Dashboard db = new Dashboard();
                         db.ShowDialog();
