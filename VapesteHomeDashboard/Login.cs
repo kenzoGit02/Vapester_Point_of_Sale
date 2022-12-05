@@ -56,5 +56,17 @@ namespace VapesteHomeDashboard
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showhidePass.Checked)
+            {
+                txtBox2.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                txtBox2.UseSystemPasswordChar = false;
+            }
+        }
     }
 }

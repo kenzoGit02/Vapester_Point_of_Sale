@@ -37,6 +37,7 @@
             this.txtBox2 = new System.Windows.Forms.TextBox();
             this.txtBox1 = new System.Windows.Forms.TextBox();
             this.lbl1 = new System.Windows.Forms.Label();
+            this.showhidePass = new System.Windows.Forms.CheckBox();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +47,7 @@
             this.gradientPanel1.Angle = 60F;
             this.gradientPanel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.gradientPanel1.BottomColor = System.Drawing.Color.Empty;
+            this.gradientPanel1.Controls.Add(this.showhidePass);
             this.gradientPanel1.Controls.Add(this.pictureBox1);
             this.gradientPanel1.Controls.Add(this.label3);
             this.gradientPanel1.Controls.Add(this.lblUser);
@@ -104,7 +106,7 @@
             // 
             // btn1
             // 
-            this.btn1.Location = new System.Drawing.Point(407, 272);
+            this.btn1.Location = new System.Drawing.Point(407, 290);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(184, 29);
             this.btn1.TabIndex = 18;
@@ -117,6 +119,7 @@
             this.txtBox2.Location = new System.Drawing.Point(407, 224);
             this.txtBox2.Multiline = true;
             this.txtBox2.Name = "txtBox2";
+            this.txtBox2.PasswordChar = '*';
             this.txtBox2.Size = new System.Drawing.Size(184, 31);
             this.txtBox2.TabIndex = 17;
             // 
@@ -138,6 +141,18 @@
             this.lbl1.Size = new System.Drawing.Size(57, 24);
             this.lbl1.TabIndex = 15;
             this.lbl1.Text = "Login";
+            // 
+            // showhidePass
+            // 
+            this.showhidePass.AutoSize = true;
+            this.showhidePass.BackColor = System.Drawing.Color.Transparent;
+            this.showhidePass.Location = new System.Drawing.Point(407, 261);
+            this.showhidePass.Name = "showhidePass";
+            this.showhidePass.Size = new System.Drawing.Size(53, 17);
+            this.showhidePass.TabIndex = 23;
+            this.showhidePass.Text = "Show";
+            this.showhidePass.UseVisualStyleBackColor = false;
+            this.showhidePass.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Login
             // 
@@ -166,5 +181,6 @@
         private System.Windows.Forms.TextBox txtBox2;
         private System.Windows.Forms.TextBox txtBox1;
         private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.CheckBox showhidePass;
     }
 }
